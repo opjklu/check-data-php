@@ -2,7 +2,7 @@
     "name": "opjklu/validate",
     "type": "library",
     "description": "validate for PHP 7.1",
-    "keywords": ["check","checking"],
+    "keywords": ["validate","validating"],
     "homepage": "https://github.com/opjklu/check-data-php.git",
     "license": "MIT",
     "authors": [
