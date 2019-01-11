@@ -1,0 +1,23 @@
+{
+    "name": "validate/check",
+    "type": "library",
+    "description": "Logging for PHP 7.1",
+    "keywords": ["validate","validating"],
+    "homepage": "https://github.com/opjklu/validate.git",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "王强",
+            "email": "opjklu@126.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Validate": "src"
+        }
+    }
+}
