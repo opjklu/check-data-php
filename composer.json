@@ -1,5 +1,5 @@
 {
-    "name": "check/data",
+    "name": "phpcheck",
     "type": "library",
     "description": "Logging for PHP 7.1",
     "keywords": ["check","checking"],
