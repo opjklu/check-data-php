@@ -1,10 +1,10 @@
 {
-    "name": "validate/check",
+    "name": "check/data",
     "type": "library",
     "description": "Logging for PHP 7.1",
-    "keywords": ["validate","validating"],
-    "homepage": "https://github.com/opjklu/validate.git",
-    "license": "Apache-2.0",
+    "keywords": ["check","checking"],
+    "homepage": "https://github.com/opjklu/check-data-php.git",
+    "license": "MIT",
     "authors": [
         {
             "name": "王强",
@@ -16,8 +16,8 @@
         "php": ">=7.1"
     },
     "autoload": {
-        "psr-0": {
-            "Validate": "src"
+        "psr-4": {
+            "Validate\\": "src"
         }
     }
 }
