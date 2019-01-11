@@ -1,5 +1,5 @@
 {
-    "name": "opjklu/check",
+    "name": "opjklu",
     "type": "library",
     "description": "validate for PHP 7.1",
     "keywords": ["check","checking"],
