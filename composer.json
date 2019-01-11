@@ -1,7 +1,7 @@
 {
     "name": "opjklu/check",
     "type": "library",
-    "description": "Logging for PHP 7.1",
+    "description": "validate for PHP 7.1",
     "keywords": ["check","checking"],
     "homepage": "https://github.com/opjklu/check-data-php.git",
     "license": "MIT",
