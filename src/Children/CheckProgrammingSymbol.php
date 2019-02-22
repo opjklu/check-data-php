@@ -35,7 +35,7 @@ class CheckProgrammingSymbol implements Validate
 		//特殊字符
 		$preg='/[\'~`!@#$%^&)(<>{}]|\]|\[|\\\|\"|\|/';
 		
-		$isTrue = preg_match($preg, $this->data[$key],$reslut);
+		$isTrue = preg_match($preg, $this->data[$key]);
 		
 		return $isTrue;
 	}

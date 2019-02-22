@@ -35,9 +35,9 @@ class SpecialCharFilter implements Validate
         //中英文及数字下划线空格
         $preg='/^[\x{4e00}-\x{9fa5}0-9a-zA-Z-_\s]+$/u';
         
-        $isTrue = preg_match($preg, $this->data[$key],$reslut);
+        $isTrue = preg_match($preg, $this->data[$key]);
         
-        return $isTrue;
+        return $isTrue !== false;
     }
     
 }
