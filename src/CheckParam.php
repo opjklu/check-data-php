@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | OnlineRetailers [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2003-2023 www.shopsn.net All rights reserved.
+// | Copyright (c) 2003-2023 www.wq520wq.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | 优雅、端庄，真好
 // +----------------------------------------------------------------------
@@ -25,8 +25,6 @@
 // |让爱情简单一点，幸福就会更丰富一点。
 // +----------------------------------------------------------------------
 namespace Validate;
-
-use Common\Tool\Event;
 
 /**
  * 检测参数
@@ -175,7 +173,7 @@ class CheckParam
      *
      * @return boolean
      */
-    public function checkParam()
+    public function detectionParameters()
     {
         $message = $this->messageNotice;
         
@@ -183,8 +181,6 @@ class CheckParam
             return false;
         }
         
-        $message = Event::insertObjectCallBack('parperParam', $message);
-       
         $result = false;
         
         foreach ($message as $key => $value) {
