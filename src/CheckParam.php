@@ -2,9 +2,9 @@
 // +----------------------------------------------------------------------
 // | OnlineRetailers [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2003-2023 www.wq520wq.cn All rights reserved.
+ // | Copyright (c) 2010-2023 www.wq520wq.cn All rights reserved..
 // +----------------------------------------------------------------------
-// | 优雅、端庄，真好
+// | 端庄、优雅、闲庭
 // +----------------------------------------------------------------------
 // | Author: 王强 <13052079525>
 // +----------------------------------------------------------------------
@@ -24,11 +24,14 @@
 // +----------------------------------------------------------------------
 // |让爱情简单一点，幸福就会更丰富一点。
 // +----------------------------------------------------------------------
+declare(strict_types = 1);
+
 namespace Validate;
+
+use Common\Tool\Event;
 
 /**
  * 检测参数
- *
  * @author 王强
  */
 class CheckParam
@@ -54,7 +57,7 @@ class CheckParam
     /**
      * 反射类对象实例
      *
-     * @var array
+     * @var \Reflection[]
      */
     private static $ref = [];
 
@@ -75,7 +78,7 @@ class CheckParam
      *
      * @return the $errorMessage
      */
-    public function getErrorMessage()
+    public function getErrorMessage() :string
     {
         return $this->errorMessage;
     }
@@ -91,7 +94,7 @@ class CheckParam
      *
      * @return the $messageNotice
      */
-    public function getMessageNotice()
+    public function getMessageNotice() :array
     {
         return $this->messageNotice;
     }
@@ -100,7 +103,7 @@ class CheckParam
      *
      * @param multitype: $messageNotice            
      */
-    public function setMessageNotice($messageNotice)
+    public function setMessageNotice($messageNotice) :void
     {
         $this->messageNotice = $messageNotice;
     }
@@ -114,7 +117,7 @@ class CheckParam
      *            待验证数据的key
      * @return bool
      */
-    protected function paramCheckNotify(array $validateKey, $key)
+    protected function paramCheckNotify(array $validateKey, $key) :bool
     {
         $class = '';
         $reflectionObj = '';
@@ -170,10 +173,9 @@ class CheckParam
 
     /**
      * 检测参数
-     *
      * @return boolean
      */
-    public function detectionParameters()
+    public function detectionParameters() :bool
     {
         $message = $this->messageNotice;
         

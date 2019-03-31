@@ -26,7 +26,7 @@ class CheckStringIsNumber implements Validate
     /**
      * 验证字符串是否是数字
      * {@inheritDoc}
-     * @see \Validate\Validate::check(string $key)
+     * @see \Validate\Validate::check(string $key) :bool
      */
     public function check(string $key) :bool
     {

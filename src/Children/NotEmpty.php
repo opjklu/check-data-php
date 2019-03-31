@@ -32,10 +32,10 @@ use Validate\Validate;
 use Validate\Common\CommonAttribute;
 
 /**
- * 验证规则是否存在key
+ * 验证规则是否有特殊字符
  * @author Administrator
  */
-class Required implements Validate
+class NotEmpty implements Validate
 {
     use CommonAttribute;
     
@@ -49,14 +49,13 @@ class Required implements Validate
         $this->message = $message;
     }
     
-    
     /**
      * {@inheritDoc}
      * @see \Validate\Validate::check(string $key) :bool
      */
     public function check(string $key) :bool
     {
-        return isset($this->data[$key]);
+        return !empty($this->data[$key]);
     }
     
 }

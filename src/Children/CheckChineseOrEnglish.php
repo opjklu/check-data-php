@@ -2,9 +2,9 @@
 // +----------------------------------------------------------------------
 // | OnlineRetailers [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2003-2023 www.shopsn.net All rights reserved.
+ // | Copyright (c) 2010-2023 www.wq520wq.cn All rights reserved..
 // +----------------------------------------------------------------------
-// | 优雅、端庄，真好
+// | 端庄、优雅、闲庭
 // +----------------------------------------------------------------------
 // | Author: 王强 <13052079525>
 // +----------------------------------------------------------------------
@@ -52,11 +52,11 @@ class CheckChineseOrEnglish implements Validate
 	/**
 	 * 非空验证长度
 	 * {@inheritDoc}
-	 * @see \Validate\Validate::check(string $key)
+	 * @see \Validate\Validate::check(string $key) :bool
 	 */
-	public function check(string $key)
+	public function check(string $key) :bool
 	{ 
-		if (empty($this->data[$key])) {
+	    if (!isset($this->data[$key])) {
 			return true;
 		}
 		
