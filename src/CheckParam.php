@@ -28,7 +28,6 @@ declare(strict_types = 1);
 
 namespace Validate;
 
-use Common\Tool\Event;
 
 /**
  * 检测参数
@@ -178,10 +177,6 @@ class CheckParam
     public function detectionParameters() :bool
     {
         $message = $this->messageNotice;
-        
-        if (empty($message) || empty($this->data)) {
-            return false;
-        }
         
         $result = false;
         
