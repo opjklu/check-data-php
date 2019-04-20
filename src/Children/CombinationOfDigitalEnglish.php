@@ -15,7 +15,7 @@ class CombinationOfDigitalEnglish implements Validate
     /**
      * 架构方法
      */
-    public function __construct($data, $message = '')
+    public function __construct(array $data, $message = '')
     {
         $this->data = $data;
         
@@ -27,11 +27,11 @@ class CombinationOfDigitalEnglish implements Validate
      * {@inheritDoc}
      * @see \Validate\Validate::check()
      */
-    public function check() :bool
+    public function check(string $key) :bool
     {
-        if (empty($this->data)) {
+        if (!isset($this->data[$key])) {
         	return true;
         }
-        return preg_match('/^[a-zA-Z\d]*$/i', $this->data) !== false;
+        return preg_match('/^[a-zA-Z\d]*$/i', $this->data[$key]) !== false;
     }
 }
