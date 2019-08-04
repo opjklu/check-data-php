@@ -42,7 +42,7 @@ class CheckImageByRelativePath
      */
     public function __construct(array $data, $message = '')
     {
-        $this->data = '.'.$data;
+        $this->data = $data;
         
         $this->message = $message;
     }
@@ -58,6 +58,6 @@ class CheckImageByRelativePath
             return true;
         }
         
-        return getimagesize($this->data[$key]) !== false;
+        return getimagesize('./public'.$this->data[$key]) !== false;
     }
 }

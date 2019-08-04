@@ -59,6 +59,6 @@ class CheckURL implements Validate
             return true;
         }
         
-        return  filter_var($this->data[$key], FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED)!== false;
+        return  filter_var($this->data[$key], FILTER_VALIDATE_URL)!== false;
     }
 }
