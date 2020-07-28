@@ -57,7 +57,11 @@ class Number implements Validate
     public function check(string $key) :bool
     {
         
-        if (!isset($this->data[$key])|| !is_numeric($this->data[$key])) {
+        if (!isset($this->data[$key])) {
+            return true;
+        }
+        
+        if (!is_numeric($this->data[$key])) {
             return false;
         }
        
